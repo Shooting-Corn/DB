@@ -13,7 +13,7 @@ curs = conn.cursor()
 
 conn.commit()
 
-f = open('R_movie_info.csv','r')
+f = open('Raw_movie_info/nonR_movie_info.csv','r')
 
 csvReader = csv.reader(f)
 
@@ -45,7 +45,7 @@ for row in csvReader:
             `{runtime}` char(10),
             `{grade}` char(10),
             `{synopsis}` longtext,
-            `{violence_per}` char(10),
+            `{violence_per}` float,
             `{violence}` int, 
             `{nudity}` int, 
             `{word}` int,
